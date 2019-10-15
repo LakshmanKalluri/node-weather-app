@@ -22,7 +22,7 @@ getWeather = (searchString) => {
     forecastElement.innerHTML = ''
     errElement.innerHTML = ''
 
-    return fetch('http://localhost:3000/weather?address='+encodeURIComponent(searchString)+'')
+    return fetch('/weather?address='+encodeURIComponent(searchString)+'')
     .then((response) => {
         return response.json()
     }).then((data) => {
